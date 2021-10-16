@@ -7,7 +7,7 @@ window.onload= ()=>{
     let msgBox = document.querySelector("section.newsletter div.message");
     subscribeBtn.onclick = (event)=>{
         event.preventDefault();
-        if (emailField.value.length != 0 || emailRegex.test(emailField.value.toLowerCase())){
+        if (emailField.value.length != 0 && emailRegex.test(emailField.value.toLowerCase())){
             msgBox.innerHTML = `Thank you! Your email address ${emailField.value} has been added to our mailing list!`;
         }
         else{
